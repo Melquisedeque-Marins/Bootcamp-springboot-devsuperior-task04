@@ -17,7 +17,7 @@ public class UserResource {
     private UserService service;
 
     @GetMapping("/profile")
-    public ResponseEntity<UserDTO> userLogged(){
+    public ResponseEntity<UserDTO> loggedInUser(){
         UserDTO user = service.loggedUser();
         return ResponseEntity.ok().body(user);
     }
